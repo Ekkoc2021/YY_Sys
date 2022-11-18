@@ -72,7 +72,6 @@ class orderController:
                 break
 
     def dealWithShopOrder(self,shopUser):
-        #todo ing
         limit=input("删除最早前n订单\n输入删除的数量n:")
         orderList = self.Service.selectShopOrderWithLimit(shopUser.username,limit)
         for i in orderList:

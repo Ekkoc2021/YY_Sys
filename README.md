@@ -94,13 +94,12 @@ Comment8: 我没有收到米线！也没有看见订单！就直接显示待评�
 Comment9: 在一个类似于取外卖的那种地方。
 ");
 
-select * from yyordersystem.shopuser;
 #商店用户表:username对应着shopid,
 create table shopuser(username varchar(32) primary key,password varchar(32) not null);
 insert into yyordersystem.shopuser value("41508471", "1241508471");
 
 #用户表
-create table useruser(account varchar(32) primary key, password varchar(32) not null);
+create table user(account varchar(32) primary key, password varchar(32) not null,contact varchar(32) not null);
 
 ```
 

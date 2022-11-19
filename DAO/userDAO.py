@@ -59,7 +59,7 @@ class userDAO:
 
     def insert(self,su):
         if su.contact is not None:
-            sql="insert into user value (%s,%s,%s);"
+            sql="insert into user value(%s,%s,%s);"
             conn = getC()
             try:
                 with conn.cursor() as cursor:

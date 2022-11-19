@@ -1,4 +1,5 @@
 from DAO.distanceDAO import distanceDAO
+from DAO.shopDAO import shopDAO
 
 
 class distanceService:
@@ -19,13 +20,15 @@ class Gra:
         self.edges = []  # 领接
         self.S = {}  # 字典,存放节点
         self.origin = origin  # 起点的id
+        s=shopDAO().selectShopByID(origin)
+        if len(s)==0:
+            print("启动失败!原因可能是:id无效或者数据库无效!")
+            raise Exception("")
         self.DAO=distanceDAO()
 
     def getData(self):
         # 查询数据库,为edges和n赋值
-        # todo 查询数据库
         self.edges=self.DAO.selectAlltoEdge()
-
         # 测试
         # def __init__(self, shop1, shop2, distance) -> None:
         #     self.s1 = shop1

@@ -1,3 +1,4 @@
+from DAO.databaseUtil import getLocation
 from controller.orderController import orderController
 from controller.shopController import shopController
 from controller.userController import userController
@@ -15,14 +16,19 @@ admin01 = adminService()
 userController01 = userController()
 shopController01=shopController()
 orderController01=orderController()
-
-g=Gra("1")
+id=getLocation()
+g=None
+try:
+    print("尝试连接数据库....")
+    g=Gra(id)
+    g.getData()
+    print("数据库连接正常!(*^▽^*)\n检查位置是否有效....\nid:"+id+" \n位置有效!(*^▽^*)\n可以正常使用!(*^▽^*)")
+except:
+    print("连接失败!(ಥ﹏ಥ)")
 isOK=[False]
 class boot:
-
     def job(self):
         #开始计算最短距离
-        g.getData()
         time.sleep(5)
         g.Dijkstra()
         isOK[0]=True
@@ -46,6 +52,7 @@ class boot:
         return None
 
     def run(self):
+        self.newThread()#开启线程,计算距离
         while 0 == 0:
             print("-------------------\n欢迎使用YY订餐系统\n1,用户\n2,商家\n3,管理员\n4,退出\n-------------------")
             c = input("请输入选项:")

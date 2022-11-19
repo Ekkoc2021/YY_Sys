@@ -104,7 +104,7 @@ create table useruser(account varchar(32) primary key, password varchar(32) not 
 
 ```
 
-### 1.2 db.ini
+### 1.2 修改配置文件
 
 找到db.ini,修改配置
 

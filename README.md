@@ -1,6 +1,6 @@
 #          **丫丫餐馆管理信息系统**  
 
-大二第一个学期python数据结构的结课作业，要求设计一个订餐管理系统，尽管要求是使用数据结构，但当我们小组询问是否可以使用数据库时，老师同意了（不知道为什么同意(*^_^*)）。正好学了一些后端知识，对于CRUD的工作流程掌握比较好，查询了一些python连接数据库的api资料，然后把这个课设作业完成了。
+  大二第一个学期python数据结构的结课作业，要求设计一个订餐管理系统，尽管要求是使用数据结构，但当我们小组询问是否可以使用数据库时，老师同意了（不知道为什么同意(*^_^*)）。正好学了一些后端知识，也算是一个入门的CRUDBOY了。在简单了解一些python连接数据库的api资料后就动手写了。实际上这里面使用查询数据库api是相当生涩的，还有一些不合理的设计使得整个系统的耦合度还是比较高的，个人认为可读性不好。
 
 ## 1,使用
 
@@ -9,7 +9,7 @@
 ```mysql
 create database yyordersystem;
 use  yyordersystem;
-# 建表语句 管理员表
+# 建表语句 管理员表Cancel changes
 create table admin (username char(32) primary key, password char(32) not null);
 select * from yyordersystem.order1;
 # 距离表:

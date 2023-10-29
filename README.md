@@ -11,7 +11,7 @@ create database yyordersystem;
 use  yyordersystem;
 # 建表语句 管理员表Cancel changes
 create table admin (username char(32) primary key, password char(32) not null);
-select * from yyordersystem.order1;
+
 # 距离表:
 # shopId,shopname是外键,每条数据对应着数据库中无向带权图的边
 create table distance (shopId1 varchar(32) not null,
